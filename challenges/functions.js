@@ -7,8 +7,8 @@
   * The consume function should return the invocation of cb, passing a and b into cb as arguments
 */
 
-function consume (a, b, cb) {
-  return cb()
+function consume (num1, num2, cb) {
+  return cb(num1, num2)
 }
 
 
@@ -32,9 +32,9 @@ function greeting (name, lastName, cb) {
 
 
 /* Step 3: Check your work by un-commenting the following calls to consume(): */
-// console.log(consume(2, 2, add)); // 4
-// console.log(consume(10, 16, multiply)); // 160
-// console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
+console.log(consume(2, 2, add)); // 4
+console.log(consume(10, 16, multiply)); // 160
+console.log(consume("Mary", "Poppins", greeting)); // Hello Mary Poppins, nice to meet you!
 
 
 // ==== Closures ==== 

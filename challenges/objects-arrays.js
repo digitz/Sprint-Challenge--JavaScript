@@ -83,11 +83,12 @@ const graduates = [
 Once you have the new array created, sort the universities alphabetically and log the result. */
 
 
-
-
 const universities = [];
+  graduates.forEach(function(array) {
+    universities.push(array.university)
+  });
 
-
+  universities.sort()
 
 console.log(universities)
 
@@ -100,13 +101,20 @@ The resulting contact information strings should have a space between the first 
 
 Log the result of your new array. */
 const contactInfo = [];
-
+graduates.forEach(function(arrayElement) {
+  contactInfo.push(arrayElement.first_name + " " + arrayElement.email)
+})
 console.log(contactInfo);
 
 
 /* Request 3: Find out how many universities have the string "Uni" included in their name. Create a new array called unisWithUni that contains them all. This will be an array of objects. Log the result. */
 
-
+const unisWithUni = [];
+graduates.forEach(function(arrayElement) {
+  if(arrayElement.university.includes("Uni")) {
+    unisWithUni.push(arrayElement);
+  }
+})
 console.log(unisWithUni);
 
 
@@ -133,6 +141,9 @@ The zoos want to display both the scientific name and the animal name in front o
 
 */
 const displayNames = [];
+zooAnimals.forEach(function(arrayElement) {
+  displayNames.push ("Name: " + arrayElement.animal_name + "Scientific:" + arrayElement.scientific_name);
+})
 
 console.log(displayNames);
 
@@ -142,8 +153,14 @@ The zoos need a list of all their animal's names (animal_name only) converted to
 
 */
 
+
 const lowCaseAnimalNames = [];
-console.log(lowCaseAnimalNames);
+const lowCase = zooAnimals.map(function(arrayElement) {
+  return arrayElement.animal_name.toLowerCase();
+});
+console.log(lowCase);
+
+
 
 /* Request 3: .filter() 
 
@@ -151,6 +168,10 @@ The zoos are concerned about animals with a lower population count. Using filter
 
 */
 const lowPopulationAnimals = [];
+const animalCount = zooAnimals.filter(function(arrayElement) {
+  return arrayElement.population < 5;
+})
+
 
 console.log(animalCount);
 
@@ -160,8 +181,6 @@ The zoos need to know their total animal population across the United States. Fi
 
 */
 const populationTotal = 0;
-
-
 
 console.log(populationTotal);
 
