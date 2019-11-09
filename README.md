@@ -30,13 +30,24 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. Describe the biggest difference between `.forEach` & `.map`.
 
+.map creates a new array while .forEach doesnt.
+
 2. What is the difference between a function and a method?
+
+Method is a function that is inside function, while function is standalone
 
 3. What is closure?
 
 4. Describe the four rules of the 'this' keyword.
 
+Is the function called by new?
+Is the function called by call(), apply(), or bind()?
+Is the function called as a method, ie: obj.func()?
+Is the function called in the global scope?
+
 5. Why do we need super() in an extended class?
+
+To call a parent constructor
 
 ## Project Set up
 
