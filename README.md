@@ -40,10 +40,6 @@ Method is a function that is inside function, while function is standalone
 
 4. Describe the four rules of the 'this' keyword.
 
-Is the function called by new? <br>
-Is the function called by call(), apply(), or bind()? <br>
-Is the function called as a method, ie: obj.func()? <br>
-Is the function called in the global scope? <br>
 
 5. Why do we need super() in an extended class?
 
